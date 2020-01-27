@@ -19,6 +19,11 @@ end
     (L, Q), dy -> (lq_back(A, L, Q, dy...),)
 end
 
+@adjoint function cholesky(A)
+	L = cholesky(A)
+  L, dy -> (cholesky_back(A, L, dy),)
+end
+
 @adjoint function svd(A)
     U, S, V = svd(A)
     (U, S, V), dy -> (svd_back(U, S, V, dy...),)
