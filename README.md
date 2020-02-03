@@ -17,7 +17,7 @@ Note: it will change the default behavior, we are considering not changing the o
 
 - [x] svd and rsvd (randomized SVD)
 - [x] qr
-- [ ] cholesky   # Nabla.jl
+- [x] cholesky   # Nabla.jl
 - [ ] powermethod   # we need fixed point methods, trying hard ...
 - [x] eigen      # linear BP paper, only symmetric case considered
 - [x] lq         # similar to qr
