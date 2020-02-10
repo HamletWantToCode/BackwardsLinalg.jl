@@ -21,7 +21,7 @@ end
 
 @adjoint function cholesky(A)
 	L = cholesky(A)
-  L, dy -> (cholesky_back(A, L, dy),)
+  L, dy -> (cholesky_back!(dy, L),)
 end
 
 @adjoint function svd(A)
